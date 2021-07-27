@@ -25,11 +25,11 @@ class App extends Component {
     await this.setState({articles: articles.results})
   }
 
-  viewDetails = async (event) => {
+  viewDetails = (event) => {
     let selectedId = event.target.id
     let selectedArticle = this.state.articles.find(article =>
       article.uri === selectedId)
-    await this.setState({selectedArticle: selectedArticle})
+    this.setState({selectedArticle: selectedArticle})
 
   }
 
