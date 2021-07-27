@@ -13,9 +13,14 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-
+    this.fetchArticles();
   }
 
+  fetchArticles = async () => {
+    const response = await fetchAllArticles();
+    const articles = await response.json()
+    await this.setState({articles: articles.results})
+  }
 
 
   render() {
