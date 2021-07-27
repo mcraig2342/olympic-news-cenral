@@ -33,10 +33,19 @@ class App extends Component {
 
   render() {
     return (
+
     <ArticleArea
       allArticles={this.state.articles}
       viewDetails={this.viewDetails}
       />
+    </div>
+  )}
+/>
+<Route path={`/nyt:id`}
+  render={() => (
+  )}
+/>
+</Switch>
 
     )
   }
