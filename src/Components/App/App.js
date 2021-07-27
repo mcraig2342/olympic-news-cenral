@@ -1,6 +1,7 @@
 import { React, Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ArticleArea from '../ArticleArea/ArticleArea.js';
+import ExpandedDetails from '../ExpandedDetails/ExpandedDetails.js'
 import './App.css';
 import { fetchAllArticles } from '../../api-calls.js';
 
@@ -57,6 +58,9 @@ class App extends Component {
 />
 <Route path={`/nyt:id`}
   render={() => (
+    <ExpandedDetails
+    selectedArticle={this.state.selectedArticle}
+    />
   )}
 />
 </Switch>
