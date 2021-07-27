@@ -45,15 +45,13 @@ class App extends Component {
     </div>
 
     : this.state.error ?
-     <h1>Sorry, no movies found</h1>
+     <h1>Sorry, no articles found</h1>
 
     : !this.state.error &&
-    <div>
     <ArticleArea
       allArticles={this.state.articles}
       viewDetails={this.viewDetails}
       />
-    </div>
   )}
 />
 <Route path={`/nyt:id`}
