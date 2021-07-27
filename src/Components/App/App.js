@@ -1,4 +1,5 @@
 import { React, Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import ArticleArea from '../ArticleArea/ArticleArea.js';
 import './App.css';
 import { fetchAllArticles } from '../../api-calls.js';
@@ -33,7 +34,20 @@ class App extends Component {
 
   render() {
     return (
+      <Switch>
+<Route exact path ='/'
+  render={() => (
 
+    !this.state.articles.length && !this.state.error ?
+    <div className='loading'>
+    <h1>LOADING</h1>
+    </div>
+
+    : this.state.error ?
+     <h1>Sorry, no movies found</h1>
+
+    : !this.state.error &&
+    <div>
     <ArticleArea
       allArticles={this.state.articles}
       viewDetails={this.viewDetails}
