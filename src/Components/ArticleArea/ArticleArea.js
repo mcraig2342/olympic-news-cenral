@@ -1,4 +1,4 @@
-
+import ArticleCard from '../ArticleCard/ArticleCard.js'
 import './ArticleArea.css'
 import { React } from 'react'
 
