@@ -1,0 +1,14 @@
+.image {
+  height: 20vw;
+  width: 30vw;
+}
+
+.articleCard {
+  height: 40vw;
+  width: 50vw;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+}
