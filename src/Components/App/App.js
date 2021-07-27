@@ -1,4 +1,5 @@
 import { React, Component } from 'react';
+import ArticleArea from '../ArticleArea/ArticleArea.js';
 import './App.css';
 import { fetchAllArticles } from '../../api-calls.js';
 
