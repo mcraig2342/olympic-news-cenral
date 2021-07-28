@@ -34,5 +34,12 @@ describe('Home page elements', () => {
        .get('.searchError').contains('Sorry no articles match your search!')
   });
 
+  it('When the user clicks an article they are routed to a details page', () => {
+     cy.get('.image').click()
+       .location('href').should('eq', 'http://localhost:3000/nyt://article/471b244f-b3d4-5569-8746-0a137263b10e')
+       .get('h3').contains('Biles was widely embraced as the latest active')
+
+  });
+
 
 });
