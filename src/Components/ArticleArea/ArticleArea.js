@@ -1,6 +1,5 @@
 import ArticleCard from '../ArticleCard/ArticleCard.js'
 import './ArticleArea.css'
-import { React } from 'react'
 
 
 
@@ -23,9 +22,11 @@ const ArticleArea = ({ allArticles, viewDetails }) => {
     }
 
   return (
-    <div onClick={viewDetails} className='articleContainer'>
-        {renderArticles(allArticles)}
-    </div>
+    <div>
+      <input className='input' type='text' onKeyUp={handleKeyPress}></input>
+      <section onClick={viewDetails} className='articleContainer'>
+          {renderArticles(filteredArticles)}
+      </section>
   );
 }
 
