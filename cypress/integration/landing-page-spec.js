@@ -13,5 +13,9 @@ describe('Home page elements', () => {
        .get('p').should('be.visible')
   });
 
+  it('Should display logo', () => {
+     cy.get('.logo').should('be.visible')
+  });
+
 
 });
