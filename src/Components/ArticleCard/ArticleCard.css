@@ -4,11 +4,20 @@
 }
 
 .articleCard {
-  height: 40vw;
-  width: 50vw;
+  padding: 5px;
   text-decoration: none;
+  box-shadow: -2.5px -2.5px 15px 5px grey,
+                2.5px 2.5px 15px 5px grey;
 }
 
-.link {
+.articleCard:hover {
+  box-shadow: -5px -5px 30px 10px grey,
+               5px 5px 30px 10px grey;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  transform: scale(1.03);
+}
+
+.title {
   text-decoration: none;
 }
