@@ -1,6 +1,7 @@
 import { React, Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ArticleArea from '../ArticleArea/ArticleArea.js';
+import Header from '../Header/Header.js';
 import ExpandedDetails from '../ExpandedDetails/ExpandedDetails.js'
 import './App.css';
 import { fetchAllArticles } from '../../api-calls.js';
@@ -48,10 +49,13 @@ class App extends Component {
      <h1>Sorry, no articles found</h1>
 
     : !this.state.error &&
+    <div>
+    <Header/>
     <ArticleArea
       allArticles={this.state.articles}
       viewDetails={this.viewDetails}
       />
+    </div>
   )}
 />
 <Route path={`/nyt:id`}
