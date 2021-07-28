@@ -9,6 +9,9 @@ const ArticleArea = ({ allArticles, viewDetails }) => {
   const [searchBar, setSearchBar] = useState('');
   const [filteredArticles, setFilteredArticles] = useState(allArticles);
 
+  const handleKeyPress = (event) => {
+    setSearchBar(event.target.value);
+  }
 
 
   const renderArticles = (articles) => {
