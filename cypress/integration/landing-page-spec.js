@@ -21,5 +21,13 @@ describe('Home page elements', () => {
      cy.get('#search').should('be.visible')
   });
 
+  it('When a user types into the search bar the results are filtered', () => {
+     cy.get('#search').type('Simone')
+       .get('.articleCard').should('be.visible')
+       .get('.image').should('be.visible')
+       .get('.title').should('be.visible')
+       .get('p').should('be.visible')
+  });
+
 
 });
