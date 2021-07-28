@@ -1,5 +1,6 @@
 import ArticleCard from '../ArticleCard/ArticleCard.js'
 import './ArticleArea.css'
+import { React, useState, useEffect } from 'react'
 
 
 
