@@ -35,11 +35,20 @@ const ArticleArea = ({ allArticles, viewDetails }) => {
     }
 
   return (
+    filteredArticles.length ?
     <div>
       <input className='input' type='text' onKeyUp={handleKeyPress}></input>
       <section onClick={viewDetails} className='articleContainer'>
           {renderArticles(filteredArticles)}
       </section>
+    </div> :
+    <div>
+      <input className='input' type='text' onKeyUp={handleKeyPress}></input>
+      <section onClick={viewDetails} className='articleContainer'>
+          <h1>Sorry no articles match your search!</h1>
+      </section>
+    </div>
+
   );
 }
 
