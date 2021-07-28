@@ -19,5 +19,6 @@
 }
 
 .title {
-  text-decoration: none;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: black;
 }
