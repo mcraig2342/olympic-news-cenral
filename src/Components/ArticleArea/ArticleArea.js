@@ -13,6 +13,10 @@ const ArticleArea = ({ allArticles, viewDetails }) => {
     setSearchBar(event.target.value);
   }
 
+  useEffect(() => {
+    const filteredArticles = allArticles.filter(article => article.title.includes(searchBar))
+    setFilteredArticles(filteredArticles)
+  }, [searchBar]);
 
   const renderArticles = (articles) => {
       return articles?.map(article => {
