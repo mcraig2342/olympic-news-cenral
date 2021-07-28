@@ -17,5 +17,9 @@ describe('Home page elements', () => {
      cy.get('.logo').should('be.visible')
   });
 
+  it('Should display search bar', () => {
+     cy.get('#search').should('be.visible')
+  });
+
 
 });
