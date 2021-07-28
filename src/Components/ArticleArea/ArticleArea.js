@@ -6,6 +6,11 @@ import { React, useState, useEffect } from 'react'
 
 const ArticleArea = ({ allArticles, viewDetails }) => {
 
+  const [searchBar, setSearchBar] = useState('');
+  const [filteredArticles, setFilteredArticles] = useState(allArticles);
+
+
+
   const renderArticles = (articles) => {
       return articles?.map(article => {
         return (
