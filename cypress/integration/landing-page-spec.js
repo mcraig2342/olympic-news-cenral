@@ -29,5 +29,10 @@ describe('Home page elements', () => {
        .get('p').should('be.visible')
   });
 
+  it('When no articles match the users search, they are notified', () => {
+     cy.get('#search').type('yolo')
+       .get('.searchError').contains('Sorry no articles match your search!')
+  });
+
 
 });
