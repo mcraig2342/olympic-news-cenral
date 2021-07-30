@@ -23,7 +23,8 @@ class App extends Component {
   fetchArticles = async () => {
     const response = await fetchAllArticles();
     const articles = await response.json()
-    await this.setState({articles: articles.results})
+    const filter = articles.results.filter(article => article.multimedia !== null)
+    await this.setState({articles: filter})
   }
 
   viewDetails = (event) => {
@@ -60,9 +61,12 @@ class App extends Component {
 />
 <Route path={`/nyt:id`}
   render={() => (
-    <ExpandedDetails
-    selectedArticle={this.state.selectedArticle}
-    />
+    <div>
+      <Header/>
+      <ExpandedDetails
+      selectedArticle={this.state.selectedArticle}
+      />
+    </div>
   )}
 />
 </Switch>

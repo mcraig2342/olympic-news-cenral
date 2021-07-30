@@ -1,0 +1,32 @@
+.back {
+  height: 2vw;
+  width: 10vw;
+  background-color: #5e87cc;
+  display: inline;
+  margin-top: 1vw;
+  margin-right: 70vw;
+  margin-bottom: 1vw;
+  margin-left: 2vw;
+}
+
+.detailImage {
+  margin-left: 27vw;
+  height: 30vw;
+  width: 40vw;
+}
+
+.detailsTitle {
+  margin-left: 25vw;
+}
+
+.abstract {
+  margin-left: 5vw;
+}
+
+.byline {
+  margin-left: 5vw;
+}
+
+.link {
+  display: inline;
+}
