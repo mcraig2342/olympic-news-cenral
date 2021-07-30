@@ -9,6 +9,7 @@ const ExpandedDetails = ({ selectedArticle }) => {
           <img className='image' src={selectedArticle.multimedia[0].url} alt={selectedArticle.multimedia[0].caption}/>
           <h3>{selectedArticle.abstract}</h3>
           <p>{selectedArticle.byline}</p>
+          <a target='_blank' href={selectedArticle.url}>Link to the NYT article</a>
       </article>
     );
 }
