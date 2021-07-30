@@ -61,9 +61,12 @@ class App extends Component {
 />
 <Route path={`/nyt:id`}
   render={() => (
-    <ExpandedDetails
-    selectedArticle={this.state.selectedArticle}
-    />
+    <div>
+      <Header/>
+      <ExpandedDetails
+      selectedArticle={this.state.selectedArticle}
+      />
+    </div>
   )}
 />
 </Switch>
